@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1E1E1E"
+    tools:context=".MainActivity">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Android AI Assistant"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/fileManagerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="文件管理"
+            android:textSize="12sp"
+            android:backgroundTint="#2196F3" />
+
+        <Button
+            android:id="@+id/modelManagerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模型管理"
+            android:textSize="12sp"
+            android:backgroundTint="#4CAF50" />
+
+    </LinearLayout>
+
+    <!-- 输出区域 -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2D2D2D"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/outputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="等待输入..."
+            android:textColor="#E0E0E0"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="4dp" />
+
+    </ScrollView>
+
+    <!-- 输入区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="输入消息或命令 (输入 /help 查看帮助)"
+            android:textColorHint="#808080"
+            android:textColor="#FFFFFF"
+            android:background="#3D3D3D"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:singleLine="true"
+            android:imeOptions="actionSend" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:backgroundTint="#FF5722" />
+
+    </LinearLayout>
+
+    <!-- 底部按钮 -->
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="清空输出"
+        android:backgroundTint="#607D8B"
+        android:textSize="12sp" />
+
+</LinearLayout>

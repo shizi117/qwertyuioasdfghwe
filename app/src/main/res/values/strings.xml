@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AI Assistant</string>
+    <string name="send">发送</string>
+    <string name="clear">清空</string>
+    <string name="file_manager">文件管理</string>
+    <string name="model_manager">模型管理</string>
+    <string name="input_hint">输入消息或命令</string>
+    <string name="help_hint">输入 /help 查看帮助</string>
+</resources>
