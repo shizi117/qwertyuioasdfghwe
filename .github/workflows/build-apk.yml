@@ -42,7 +42,7 @@ jobs:
         retention-days: 30
 
     - name: Release APK
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       uses: softprops/action-gh-release@v1
       with:
         files: app/build/outputs/apk/release/*.apk
