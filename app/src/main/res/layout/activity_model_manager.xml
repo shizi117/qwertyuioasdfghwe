@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="模型管理"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择要下载的模型"
+        android:layout_marginTop="16dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_download_qwen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下载 Qwen2.5-32B"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btn_download_llama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下载 Llama-3.1-70B"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btn_download_deepseek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下载 DeepSeek-Coder-V2"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
