@@ -28,7 +28,9 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build APK
-      run: ./gradlew assembleRelease --stacktrace
+      run: |
+        export JAVA_HOME=$JAVA_HOME_17_X64
+        ./gradlew assembleRelease --stacktrace --no-daemon
 
     - name: Find APK
       run: |
